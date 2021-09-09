@@ -51,7 +51,9 @@ Describe any challenges encountered while building the app.
 
 
 
-![](https://i.imgur.com/cXTq8Yr.gif)
+![](https://i.imgur.com/ZxayTX9.gif)
+
+
 
 
 
