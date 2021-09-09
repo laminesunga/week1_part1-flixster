@@ -77,7 +77,7 @@ class moviesViewController: UIViewController, UITableViewDataSource, UITableView
 
         cell.posterviewLabel.af_setImage(withURL: posterUrl!)
         
-            //"row:\(indexPath.row)"
+        
         
         return cell
     }
@@ -85,14 +85,34 @@ class moviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+        
+        // Find the selected movies
+        
+        let cell = sender as! UITableViewCell
+        let indexPath = Tableview.indexPath(for: cell)!
+        
+        let movie = movies[indexPath.row]
+        
+        
+        print("Loading the details screen")
+        
         // Pass the selected object to the new view controller.
+        
+        let detailsViewController = segue.destination as! MoviedetailViewController
+        
+        detailsViewController.movie = movie
+        
+        Tableview.deselectRow(at: indexPath, animated:true)
+        
+        
+        
     }
-    */
+    
 
 }
