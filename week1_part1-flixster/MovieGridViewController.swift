@@ -29,7 +29,8 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource,UICo
         layout.minimumLineSpacing = 4
         layout.minimumInteritemSpacing = 4
         
-        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
+       
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing ) / 2
         layout.itemSize = CGSize(width: width, height: width * 3 / 2 )
         
         
@@ -85,7 +86,7 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource,UICo
     
 
     /*
-    // MARK: - Navigation
+    // MARK: - Navigatio
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -93,5 +94,4 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource,UICo
         // Pass the selected object to the new view controller.
     }
     */
-
 }
